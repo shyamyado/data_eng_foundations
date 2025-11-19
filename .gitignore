@@ -1,0 +1,56 @@
+# ClickHouse persistent data (huge, never commit)
+data/clickhouse/
+data/clickhouse/**
+
+# Raw/input data (CSVs, Parquet, JSON, etc.)
+data/raw/
+data/raw/**
+
+# Docker & containers
+.docker/
+docker-compose.override.yml
+
+# Python / venv
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytest_cache/
+
+# IDEs & editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Optional: if you ever add notebooks
+notebooks/*.ipynb_checkpoints/

@@ -1,41 +1,75 @@
-# ClickHouse persistent data (huge, never commit)
+##############################
+# Project Data
+##############################
+
+# ClickHouse persistent volumes (never commit)
 data/clickhouse/
 data/clickhouse/**
 
-# Raw/input data (CSVs, Parquet, JSON, etc.)
+# Raw input data (keep only sample data via .gitkeep if needed)
 data/raw/
 data/raw/**
 
-# Docker & containers
-.docker/
-docker-compose.override.yml
+##############################
+# Spark Runtime / Temp Output
+##############################
+# Spark shuffle & job temp dirs
+spark-warehouse/
+derby.log
+.metastore/
+*.crc
+*.snappy
+*.avro
+*.parquet
 
-# Python / venv
+# Local job logs
+logs/
+*.log
+
+##############################
+# Python
+##############################
 __pycache__/
 *.py[cod]
 *$py.class
 *.pyo
 *.pyd
-.Python
+
+# Virtual environments
 env/
 venv/
 .venv/
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
+.uv/
+.uv-cache/
+.Python
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+.installed.cfg
+
+# Testing & coverage
+.pytest_cache/
 .coverage
 .coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
+htmlcov/
+.nox/
+.tox/
 .mypy_cache/
 .dmypy.json
-dmypy.json
-.pytest_cache/
+pytestdebug.log
 
-# IDEs & editors
+##############################
+# Docker & Containers
+##############################
+docker-compose.override.yml
+.docker/
+tmp/
+
+##############################
+# Editors / OS files
+##############################
 .vscode/
 .idea/
 *.swp
@@ -43,14 +77,4 @@ dmypy.json
 *~
 .DS_Store
 Thumbs.db
-
-# OS generated
-.DS_Store
-.DS_Store?
 ._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-
-# Optional: if you ever add notebooks
-notebooks/*.ipynb_checkpoints/

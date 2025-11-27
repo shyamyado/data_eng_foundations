@@ -27,6 +27,9 @@ services:
   spark-master:
     build: ./spark-master
     container_name: spark-master
+    volumes:
+      - ../src:/opt/spark/work-dir/src
+      - ../data:/data
     ports:
       - "9090:8080"
       - "7077:7077"

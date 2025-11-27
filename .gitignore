@@ -3,12 +3,12 @@
 ##############################
 
 # ClickHouse persistent volumes (never commit)
-data/clickhouse/
-data/clickhouse/**
+data/clickhouse/*
+!data/clickhouse/.gitkeep
 
 # Raw input data (keep only sample data via .gitkeep if needed)
-data/raw/
-data/raw/**
+data/raw/*
+!data/raw/.gitkeep
 
 ##############################
 # Spark Runtime / Temp Output
